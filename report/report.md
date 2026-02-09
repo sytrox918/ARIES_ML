@@ -161,30 +161,15 @@ Severity is evaluated using R², not accuracy. Incorrect mid-level predictions a
 
 ---
 
-## 8. Leaderboard Experiments and Findings
 
-Aggressive leaderboard strategies were tested to understand higher scores (0.75+):
 
-- Regex-only secondary forcing
-- Label collapsing with heuristic remapping
-- Dominant-label biasing
-
-### Empirical Results
-- Partial forcing produced ~0.66.
-- Full forcing (100% coverage) caused score collapse to ~0.61.
-
-Conclusion:
-Leaderboard-level scores require iterative tuning using hidden test feedback or annotation artifact exploitation. These approaches were intentionally rejected.
-
----
-
-## 9. Results Summary
+## 10. Results Summary
 
 | Approach | Final Score |
 |--------|-------------|
 | TF-IDF baseline | ~0.60 |
 | Embeddings + clean prototypes | ~0.66 |
-| Fine-tuned transformer (clean) | 0.67904 |
+| Fine-tuned transformer (clean) | 0.69784 |
 | Aggressive leaderboard forcing | ~0.61 |
 
 Final accepted score:
@@ -218,8 +203,4 @@ The system is production-grade, logically consistent, and defensible.
 
 ## 12. Conclusion
 
-The achieved score of 0.679 reflects dataset ambiguity and evaluation design, not modeling limitations.
-
-This project demonstrates disciplined ML engineering, correct handling of noisy labels, and the ability to distinguish real signal from leaderboard illusion.
-
-0.679 is not a failure — it is the truth of the problem.
+The achieved score of 0.69784
